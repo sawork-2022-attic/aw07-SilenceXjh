@@ -4,6 +4,11 @@ spring:
      name: gateway-service  # Service registers under this name
   freemarker:
     enabled: false           # Ignore Eureka dashboard FreeMarker templates
+  cloud:
+    gateway:
+      httpclient:
+        connect-timeout: 1000
+        response-timeout: 5s
 
 # HTTP Server
 server.port: 8080   # HTTP (Tomcat) port
